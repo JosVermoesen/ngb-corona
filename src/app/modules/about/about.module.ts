@@ -20,9 +20,9 @@ import { AboutComponent } from './about.component';
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
-    })
-  ]
+        deps: [HttpClient],
+      },
+    }),
+  ],
 })
 export class AboutModule {}

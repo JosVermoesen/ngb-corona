@@ -13,4 +13,4 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
     },
   ],
 })
-export class HomeComponent { }
+export class HomeComponent {}

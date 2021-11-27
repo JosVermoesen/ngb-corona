@@ -15,11 +15,11 @@ const routes: Routes = [
   {path: 'radar-chart', component: MyRadarChartComponent},
   {path: 'pie-chart', component: MyPieChartComponent},
   {path: '**', component: MyBarChartComponent}, */
-  { path: '', component: ChartComponent }
+  { path: '', component: ChartComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ChartRoutingModule { }
+export class ChartRoutingModule {}

@@ -12,7 +12,8 @@ import { ITimeline } from './_models/timeline';
 import { IWorld } from './_models/world';
 import { environment } from '../../../environments/environment';
 
-function setSelectedIndex(s, v: string) {  
+function setSelectedIndex(s, v: string) {
+  // tslint:disable-next-line: prefer-for-of
   for (let i = 0; i < s.options.length; i++) {
     if (s.options[i].text === v) {
       s.options[i].selected = true;
@@ -55,7 +56,6 @@ export class CoronaComponent implements OnInit {
   coronaCountry: ICountry;
   countryHistorical: ICountryHistorical;
 
-
   countryTimeline: ITimeline;
 
   public coronaChartLabels: string[];
@@ -77,7 +77,7 @@ export class CoronaComponent implements OnInit {
   graphLabel2: string;
   // graphLabel3: string;
 
-  constructor(private cs: CoronaService, private ts: TranslateService) { }
+  constructor(private cs: CoronaService, private ts: TranslateService) {}
 
   ngOnInit(): void {
     this.getGlobalNumbers();
@@ -191,12 +191,11 @@ export class CoronaComponent implements OnInit {
   }
 
   prepareGraph() {
-    this.countryCases = Object.
-      values(this.countryHistorical.timeline.cases);
-    this.countryRecovered = Object.
-      values(this.countryHistorical.timeline.recovered);
-    this.countryDeaths = Object
-      .values(this.countryHistorical.timeline.deaths);
+    this.countryCases = Object.values(this.countryHistorical.timeline.cases);
+    this.countryRecovered = Object.values(
+      this.countryHistorical.timeline.recovered
+    );
+    this.countryDeaths = Object.values(this.countryHistorical.timeline.deaths);
 
     this.ts.get('CORONA.GraphLabel1').subscribe((res: string) => {
       this.graphLabel1 = res;
@@ -225,7 +224,7 @@ export class CoronaComponent implements OnInit {
       const valueCases1 = Number(this.countryCases[casesCounter]);
       const valueCases2 = Number(this.countryCases[casesCounter + 1]);
       const valueCases3 = valueCases2 - valueCases1;
-      this.countryCasesOnDay.push(valueCases3)
+      this.countryCasesOnDay.push(valueCases3);
       casesCounter++;
     }
 
@@ -234,7 +233,7 @@ export class CoronaComponent implements OnInit {
       const valueDeaths1 = Number(this.countryDeaths[deathCounter]);
       const valueDeaths2 = Number(this.countryDeaths[deathCounter + 1]);
       const valueDeaths3 = valueDeaths2 - valueDeaths1;
-      this.countryDeathsOnDay.push(valueDeaths3)
+      this.countryDeathsOnDay.push(valueDeaths3);
       deathCounter++;
     }
 

@@ -26,14 +26,14 @@ import { SharedModule } from '../shared.module';
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
     FontAwesomeModule,
     TabsModule.forRoot(),
     ChartsModule,
-    CoronaRoutingModule
+    CoronaRoutingModule,
   ],
-  providers: [CoronaService]
+  providers: [CoronaService],
 })
 export class CoronaModule {}

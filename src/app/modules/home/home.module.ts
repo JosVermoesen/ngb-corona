@@ -24,10 +24,10 @@ import { HomeComponent } from './home.component';
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
-    FontAwesomeModule
-  ]
+    FontAwesomeModule,
+  ],
 })
 export class HomeModule {}

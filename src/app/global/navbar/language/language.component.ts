@@ -7,7 +7,7 @@ import { LanguageService } from '../../language.service';
 @Component({
   selector: 'app-language',
   templateUrl: './language.component.html',
-  styleUrls: ['./language.component.css']
+  styleUrls: ['./language.component.css'],
 })
 export class LanguageComponent implements OnInit {
   title: string;

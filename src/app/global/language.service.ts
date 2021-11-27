@@ -4,12 +4,12 @@ import { TranslateService } from '@ngx-translate/core';
 const LNG_KEY = 'SELECTED_LANGUAGE';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LanguageService {
   selected = '';
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService) {}
 
   setInitialAppLanguage() {
     const language = this.translate.getBrowserLang();
@@ -29,29 +29,29 @@ export class LanguageService {
         subtext: 'België, Nederland',
         value: 'nl',
         img: 'assets/images/flags/nl.png',
-        enabled: true
+        enabled: true,
       },
       {
         text: 'Français',
         subtext: 'La Belgique, La France',
         value: 'fr',
         img: 'assets/images/flags/fr.png',
-        enabled: true
+        enabled: true,
       },
       {
         text: 'Deutsch',
         subtext: 'Ostbelgien, Deutschland',
         value: 'de',
         img: 'assets/images/flags/de.png',
-        enabled: true
+        enabled: true,
       },
       {
         text: 'English',
         subtext: 'Ireland, United Kingdom',
         value: 'en',
         img: 'assets/images/flags/ie.png',
-        enabled: true
-      } // ,
+        enabled: true,
+      }, // ,
       /* {
         text: 'Pilipino',
         subtext: 'Pilipinas',

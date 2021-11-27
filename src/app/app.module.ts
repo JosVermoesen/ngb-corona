@@ -27,7 +27,7 @@ import { NavbarComponent } from './global/navbar/navbar.component';
     AppComponent,
     LanguageComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,19 +38,19 @@ import { NavbarComponent } from './global/navbar/navbar.component';
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
     ModalModule.forRoot(),
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     LanguageService,
     BsModalRef,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   entryComponents: [LanguageComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

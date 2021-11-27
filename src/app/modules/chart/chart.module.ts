@@ -20,13 +20,13 @@ import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
     MyLineChartComponent,
     MyDoughnutChartComponent,
     MyRadarChartComponent,
-    MyPieChartComponent
+    MyPieChartComponent,
   ],
   imports: [
     CommonModule,
     ChartRoutingModule,
     ChartsModule,
     TabsModule.forRoot(),
-  ]
+  ],
 })
-export class ChartModule { }
+export class ChartModule {}

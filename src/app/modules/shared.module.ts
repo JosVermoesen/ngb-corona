@@ -10,12 +10,12 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
   exports: [
     // MdToHtmlPipe // so we use already for a pipe
     // appDirective
-  ]
+  ],
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {
     return {
-      ngModule: SharedModule
+      ngModule: SharedModule,
       // providers: [ appService ]
     };
   }
