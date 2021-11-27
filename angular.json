@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngCorona-stats": {
+    "ngb-corona": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
             "allowedCommonJsDependencies": [
               "chart.js"
             ],
-            "outputPath": "dist/ngCorona-stats",
+            "outputPath": "dist/ngb-corona",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,18 +78,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngCorona-stats:build"
+            "browserTarget": "ngb-corona:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngCorona-stats:build:production"
+              "browserTarget": "ngb-corona:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngCorona-stats:build"
+            "browserTarget": "ngb-corona:build"
           }
         },
         "test": {
@@ -126,18 +126,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngCorona-stats:serve"
+            "devServerTarget": "ngb-corona:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngCorona-stats:serve:production"
+              "devServerTarget": "ngb-corona:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ngCorona-stats",
+  "defaultProject": "ngb-corona",
   "cli": {
     "analytics": "45bc7254-7ce6-405d-986a-4443f7ff615b"
   }
